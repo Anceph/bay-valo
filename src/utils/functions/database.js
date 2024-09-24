@@ -50,6 +50,7 @@ export async function getUserData(discord_id) {
             if (row) {
                 resolve(row);
             } else {
+                return
                 reject('User not found');
             }
         }).catch((err) => {
